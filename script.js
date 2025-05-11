@@ -1,4 +1,4 @@
-let tg = window.Telegram.WebApp
+ let tg = window.Telegram.WebApp
 
 tg.expand()
 
@@ -6,10 +6,10 @@ tg.MainButton.textColor = "#FFFFFF"
 tg.MainButton.color = "#FF8979"
 
 let items = {
-    carrot: 0,
-    potato: 0,
-    cucumber: 0,
-    tomato: 0
+    лазанья: 0,
+    жульен: 0,
+    карбонара: 0,
+    хачапури: 0
 }
 let price = 0
 let name = ""
@@ -63,25 +63,25 @@ userphone.onchange = () => {
 }
 
 btn1.onclick = () => {
-    items['carrot'] += 1
+    items['лазанья'] += 1
     price += 5
     update_orders()
 }
 
 btn2.onclick = () => {
-    items['potato'] += 1
+    items['жульен'] += 1
     price += 3
     update_orders()
 }
 
 btn3.onclick = () => {
-    items['cucumber'] += 1
+    items['карбонара'] += 1
     price += 4
     update_orders()
 }
 
 btn4.onclick = () => {
-    items['tomato'] += 1
+    items['хачапури'] += 1
     price += 6
     update_orders()
 }
@@ -94,7 +94,7 @@ submit.onclick = () => {
 }
 
 Telegram.WebApp.onEvent("mainButtonClicked", function() {
-    result = ""
+    let result = ""
     if (name != "") {
         result += "Ваше имя: " + name + "\n"
     }
